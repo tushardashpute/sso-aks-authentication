@@ -81,6 +81,38 @@ You will get output like below:
 
 ![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/54da9be8-7eac-4912-87a4-25715857c6c6)
 
+**step 4: Access your enabled cluster**
+
+- Login to azure account using the sso user eksadmin which we created using
+
+        az login
+
+Prompt will open to authorize the user:
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/71440650-6718-42dc-9f8c-1cc088d5c5a0)
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/d4c47e21-d92a-4bff-83ec-f6efc0e29d3b)
+
+- Get the user credentials to access your cluster using the az aks get-credentials command.
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/b57f3069-6f06-492e-b329-5d7a583f02d1)
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/2ba6ab3d-ff8e-4440-887f-f161173c75d3)
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/89a0b5c3-49db-4d6d-b0a0-5b7763ce2356)
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/672a3eb4-9b1a-44d4-bb8b-a0be4cc0224b)
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/1ea71df7-7571-4066-8305-a62c4ccd3731)
+
+if you get error like this:
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/626978d9-ce32-4239-8926-623f71882ca3)
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/61120dce-9763-4afd-90c9-aefa0320c948)
+
+
+
 References:
 ----------
 - https://learn.microsoft.com/en-us/azure/aks/enable-authentication-microsoft-entra-id
