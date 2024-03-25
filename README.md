@@ -64,7 +64,22 @@ Goto azure portal --> groups --> select admin group --> member --> add member
 
  - Enable AKS-managed Microsoft Entra integration on your existing Kubernetes RBAC-enabled cluster using the az aks update command. Make sure to set your admin group to keep access to your cluster.
 
+
+az aks update -g MyResourceGroup -n myManagedCluster --enable-aad --aad-admin-group-object-ids <id-1>,<id-2> [--aad-tenant-id <id>]
+
+You need group-id(group id you can get from the group that we created above) and tenant-id.
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/b6e3bd28-2f22-4cac-aae6-5f3533f169c1)
+
+To get tenant-id --> goto azure portal --> Microsoft Entra ID
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/946cd551-351f-40ad-828b-efe3e2d9fcbd)
+
     az aks update -g myResourceGroup  -n myAKSCluster  --enable-aad --aad-admin-group-object-ids 4123d440-384b-4dd6-a8af-f4e85cbbbf53 --aad-tenant-id 5c50fb70-dbd8-4044-8f88-ae5bbcd63a75
+
+You will get output like below:
+
+![image](https://github.com/tushardashpute/sso-aks-authentication/assets/74225291/54da9be8-7eac-4912-87a4-25715857c6c6)
 
 References:
 ----------
